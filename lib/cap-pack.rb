@@ -4,7 +4,7 @@ Capistrano::Configuration.instance.load do
   def tty_ssh_command_in_current_host(command, hostname = current_host)
     user_ssh_command = fetch(:user, nil) ? "-l #{fetch(:user)}" : ''
 
-    exec %{ssh #{user_ssh_command} #{hostname} -t "#{user_shell_method} 'cd #{current_path} && #{command}'"}.tap { |o| p o }
+    exec %{ssh #{user_ssh_command} #{hostname} -t "#{user_shell_method} 'cd #{current_path} && #{command}'"}
   end
 
   def current_host

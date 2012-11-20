@@ -10,7 +10,7 @@ Capistrano::Configuration.instance.load do
   end
 
   def current_host
-    find_servers_for_task(current_task).first
+    ENV['HOST'] || find_servers_for_task(current_task).first
   end
 
   Dir[File.expand_path('../cap-pack/recipes/**/*.rb', __FILE__)].each { |f| load f }

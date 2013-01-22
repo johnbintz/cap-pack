@@ -4,8 +4,8 @@ require File.expand_path('../lib/cap-pack/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["John Bintz"]
   gem.email         = ["john@coswellproductions.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Things I do for Capistrano deploys.}
+  gem.summary       = %q{Things I do for Capistrano deploys.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
